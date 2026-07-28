@@ -1,0 +1,24 @@
+<app-hero />
+
+<section class="dashboard">
+  <section>
+    @if (store.loading()) {
+      <app-ticket-skeleton />
+
+    } @else if (store.error()) {
+      <app-error-state [message]="store.error()!" />
+
+    } @else if (store.tickets().length === 0) {
+      <app-empty-state />
+
+    } @else {
+      @for (ticket of store.tickets(); track ticket.key) {
+        <app-ticket-card [ticket]="ticket" />
+      }
+    }
+  </section>
+
+  <aside>
+    <app-privacy-card />
+  </aside>
+</section>

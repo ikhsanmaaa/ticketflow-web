@@ -1,0 +1,23 @@
+<div class="ticket-card">
+  <div class="ticket-left">
+    <span class="key">
+      {{ ticket.key }}
+    </span>
+
+    <div>
+      <h4>
+        {{ ticket.summary }}
+      </h4>
+
+      <small>
+        {{ ticket.workType }}
+
+        •
+
+        {{ ticket.updated }}
+      </small>
+    </div>
+  </div>
+
+  <app-status-badge [status]="ticket.status" />
+</div>
