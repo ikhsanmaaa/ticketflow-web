@@ -1,0 +1,83 @@
+
+@use "./breakpoint.scss" as *;
+@use "./colors.scss" as *;
+@use "./variable.scss" as *;
+
+
+@mixin flex-center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+@mixin flex-between{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+@mixin card{
+
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+
+}
+
+@mixin container{
+
+    width:min(100% - 3rem,1400px);
+
+    margin-inline:auto;
+
+}
+
+@mixin line-clamp($line){
+
+    overflow:hidden;
+
+    display:-webkit-box;
+
+    -webkit-box-orient:vertical;
+
+    -webkit-line-clamp:$line;
+
+}
+
+@mixin surface {
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+}
+
+@mixin card-transparent{
+  
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+
+  padding: 20px;
+}
+
+@mixin glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: $radius-lg;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}

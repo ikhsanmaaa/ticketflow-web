@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [ZardButtonComponent],
   templateUrl: './header.html',
-  styleUrl: './header.css',
+  styleUrl: './header.scss',
 })
 export class Header {
   login() {

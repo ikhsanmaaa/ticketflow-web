@@ -1,0 +1,39 @@
+@use "styles/index" as *;
+
+.ticket-section {
+
+  @include glass-card;
+
+  overflow: hidden;
+
+  padding: 0;
+
+  &__header{
+
+    padding:1.25rem 1.5rem;
+
+    border-bottom:1px solid $border;
+
+    h2{
+
+      margin:0;
+
+      font-size:1.1rem;
+
+      font-weight:700;
+
+    }
+
+    p{
+
+      margin:.35rem 0 0;
+
+      color:$text-secondary;
+
+      font-size:.875rem;
+
+    }
+
+  }
+
+}

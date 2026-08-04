@@ -15,21 +15,49 @@ export class TicketStore {
 
   readonly error = signal<string | null>(null);
 
-  load(token: string) {
-    this.loading.set(true);
+  readonly selectedTicket = signal<Ticket | null>(null);
 
+  readonly dialogOpen = signal(false);
+
+  select(ticket: Ticket) {
+    this.selectedTicket.set(ticket);
+    this.dialogOpen.set(true);
+  }
+
+  closeDialog() {
+    this.dialogOpen.set(false);
+
+    this.selectedTicket.set(null);
+  }
+
+  token(token: string) {
+    this.loading.set(true);
     this.error.set(null);
 
     this.ticketService.getTickets(token).subscribe({
+      next: (tickets) => {
+        this.tickets.set([tickets]);
+        this.loading.set(false);
+      },
+      error: () => {
+        this.loading.set(false);
+        this.error.set('Gagal memuat tiket');
+      },
+    });
+  }
+
+  load() {
+    this.loading.set(true);
+    this.error.set(null);
+
+    this.ticketService.getLastTickets().subscribe({
       next: (tickets) => {
         this.tickets.set(tickets);
 
         this.loading.set(false);
       },
-
       error: () => {
         this.loading.set(false);
-
         this.error.set('Gagal memuat tiket');
       },
     });

@@ -3,9 +3,9 @@ export interface Ticket {
 
   summary: string;
 
-  workType: string;
+  issueType: string;
 
   status: string;
 
-  updated: string;
+  lastUpdated: string;
 }

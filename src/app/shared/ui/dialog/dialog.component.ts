@@ -62,6 +62,7 @@ export class ZardDialogOptions<T, U> {
   zTitle?: string | TemplateRef<T>;
   zViewContainerRef?: ViewContainerRef;
   zWidth?: string;
+  zShell?: Type<BasePortalOutlet>;
 }
 
 @Component({
@@ -88,7 +89,12 @@ export class ZardDialogOptions<T, U> {
       @if (config.zTitle || config.zDescription) {
         <header [class]="headerClasses()" data-slot="dialog-header">
           @if (config.zTitle) {
-            <h4 data-testid="z-title" data-slot="dialog-title" [class]="titleClasses()" [id]="idRef.id() + '-title'">
+            <h4
+              data-testid="z-title"
+              data-slot="dialog-title"
+              [class]="titleClasses()"
+              [id]="idRef.id() + '-title'"
+            >
               {{ config.zTitle }}
             </h4>
 
@@ -118,7 +124,13 @@ export class ZardDialogOptions<T, U> {
       @if (!config.zHideFooter) {
         <footer [class]="footerClasses()" data-slot="dialog-footer">
           @if (config.zCancelText !== null) {
-            <button type="button" data-testid="z-cancel-button" z-button zType="outline" (click)="onCloseClick()">
+            <button
+              type="button"
+              data-testid="z-cancel-button"
+              z-button
+              zType="outline"
+              (click)="onCloseClick()"
+            >
               @if (config.zCancelIcon) {
                 @if (isSvgString(config.zCancelIcon)) {
                   <ng-icon [svg]="config.zCancelIcon" class="size-4!" />
@@ -201,13 +213,17 @@ export class ZardDialogComponent<T, U> extends BasePortalOutlet {
   protected readonly config = inject(ZardDialogOptions<T, U>);
   private readonly idRef = viewChild.required<ZardIdDirective>('idRef');
 
-  protected readonly classes = computed(() => mergeClasses(dialogVariants(), this.config.zCustomClasses));
+  protected readonly classes = computed(() =>
+    mergeClasses(dialogVariants(), this.config.zCustomClasses),
+  );
   protected readonly headerClasses = computed(() => dialogHeaderVariants());
   protected readonly titleClasses = computed(() => dialogTitleVariants());
   protected readonly descriptionClasses = computed(() => dialogDescriptionVariants());
   protected readonly footerClasses = computed(() => dialogFooterVariants());
   protected readonly isStringContent = computed(() => typeof this.config.zContent === 'string');
-  protected readonly titleId = computed(() => (this.config.zTitle ? `${this.idRef().id()}-title` : null));
+  protected readonly titleId = computed(() =>
+    this.config.zTitle ? `${this.idRef().id()}-title` : null,
+  );
   protected readonly descriptionId = computed(() =>
     this.config.zDescription ? `${this.idRef().id()}-description` : null,
   );

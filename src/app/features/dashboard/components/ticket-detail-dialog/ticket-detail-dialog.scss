@@ -1,0 +1,198 @@
+@use "styles/index" as *;
+
+.ticket-dialog {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: white;
+}
+
+.ticket-dialog__close {
+
+    position: absolute;
+
+    top: 1rem;
+
+    right: 1rem;
+
+    width: 36px;
+
+    height: 36px;
+
+    border: none;
+
+    border-radius: 999px;
+
+    background: transparent;
+
+    color: $text-secondary;
+
+    font-size: 1.2rem;
+
+    transition: .2s;
+
+    &:hover{
+
+        background:#f5f5f5;
+
+    }
+
+}
+
+.ticket-dialog__header{
+
+    padding:2rem;
+
+    border-bottom:1px solid $border;
+
+}
+
+.ticket-dialog__top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:1.5rem;
+
+}
+
+.ticket-dialog__type{
+
+    display:inline-flex;
+
+    padding:.45rem .85rem;
+
+    border-radius:999px;
+
+    border:1px solid $border;
+
+    background:#f8fafc;
+
+    color:$text-secondary;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+}
+
+.ticket-dialog__status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:.45rem .9rem;
+
+    border-radius:999px;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+}
+
+.ticket-dialog__header h2{
+
+    margin:0;
+
+    font-size:1.9rem;
+
+    line-height:1.35;
+
+    font-weight:700;
+
+}
+
+.ticket-dialog__header p{
+
+    margin-top:.75rem;
+
+    color:$text-secondary;
+
+}
+
+.ticket-dialog__body{
+
+    padding:2rem;
+
+}
+
+.ticket-dialog__meta{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding-bottom:1.5rem;
+
+    margin-bottom:1.5rem;
+
+    border-bottom:1px solid $border;
+
+}
+
+.ticket-dialog__meta span{
+
+    color:$text-secondary;
+
+}
+
+.ticket-dialog__next{
+
+    padding:1.25rem;
+
+    border-radius:14px;
+
+    background:#f8fafc;
+
+    border:1px solid $border;
+
+}
+
+.ticket-dialog__next small{
+
+    display:block;
+
+    margin-bottom:.75rem;
+
+    color:$text-secondary;
+
+    font-weight:700;
+
+    letter-spacing:.08em;
+
+}
+
+.ticket-dialog__next p{
+
+    margin:0;
+
+    line-height:1.8;
+
+}
+
+.ticket-dialog__warning{
+
+    margin-top:1rem;
+
+    padding:1rem;
+
+    border-radius:12px;
+
+    background:#fff8e7;
+
+    border-left:4px solid #f59e0b;
+
+    color:#92400e;
+
+}

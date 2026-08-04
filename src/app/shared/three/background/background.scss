@@ -1,0 +1,22 @@
+:host {
+  position: fixed;
+  inset: 0;
+
+  z-index: -1;
+
+  pointer-events: none;
+}
+
+/* Make the angular-three canvas fill the host */
+:host ngt-canvas,
+:host > * {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.background-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

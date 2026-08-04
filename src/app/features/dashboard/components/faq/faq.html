@@ -1,0 +1,17 @@
+<section class="faq">
+  <div class="faq__header">
+    <h2>Pertanyaan Umum</h2>
+
+    <p>Jawaban untuk pertanyaan yang sering diajukan mengenai TicketFlow.</p>
+  </div>
+
+  <z-accordion>
+    @for (item of faqs(); track item.question) {
+      <z-accordion-item [zTitle]="item.question" [zValue]="item.question">
+        <p class="faq__answer">
+          {{ item.answer }}
+        </p>
+      </z-accordion-item>
+    }
+  </z-accordion>
+</section>

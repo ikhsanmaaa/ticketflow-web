@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after{
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+    height: 100%;
+
+}
+
+body{
+
+    margin:0;
+
+    min-height:100vh;
+
+    /* Let the fixed Three.js canvas show through — Tailwind's bg-background
+       would paint solid white over z-index:-1, so we override it here. */
+    background: transparent !important;
+
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+button{
+
+    font:inherit;
+
+}
+
+input{
+
+    font:inherit;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}

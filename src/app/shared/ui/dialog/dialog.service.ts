@@ -116,7 +116,10 @@ export class ZardDialogService {
     return dialogRef;
   }
 
-  private createInjector<T, U>(dialogRef: ZardDialogRef<T>, config: ZardDialogOptions<T, U>): Injector {
+  private createInjector<T, U>(
+    dialogRef: ZardDialogRef<T>,
+    config: ZardDialogOptions<T, U>,
+  ): Injector {
     return Injector.create({
       parent: this.injector,
       providers: [

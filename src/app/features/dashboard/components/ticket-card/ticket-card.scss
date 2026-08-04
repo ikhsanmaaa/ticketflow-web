@@ -1,29 +1,107 @@
+@use "styles/index" as *;
+
 .ticket-card{
 
-    display:flex;
+  transition:  transform $transition,
 
-    justify-content:space-between;
+        box-shadow $transition,
+
+        background-color $transition;
+
+  margin: 10px 5px 10px 5px;
+
+  padding:1rem;
+
+  border-radius:10px;
+
+  cursor:pointer;
+
+  transition:.18s;
+
+  &:hover{
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    background:rgba($primary,.04);
+
+  }
+
+  &+&{
+
+    border-top:1px solid $border;
+
+  }
+
+  &__header{
+
+    display:grid;
+
+    grid-template-columns:1fr auto;
+
+    gap:1rem;
 
     align-items:center;
 
-    padding:20px;
+  }
 
-    border-radius:16px;
+  &__identity{
 
-    cursor:pointer;
+    min-width:0;
 
-    transition:.2s;
+  }
 
-    &:hover{
+  &__key{
 
-        transform:translateY(-2px);
+    display:block;
 
-    }
+    margin-bottom:.35rem;
 
-}
-
-.key{
+    font-size:.75rem;
 
     font-weight:700;
+
+    letter-spacing:.04em;
+
+  }
+
+  &__title{
+
+    margin:0;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+  }
+
+  &__meta{
+
+    margin-top:.35rem;
+
+    display:flex;
+
+    gap:.4rem;
+
+    color:$text-secondary;
+
+    font-size:.82rem;
+
+  }
+  .ticket-dialog__status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:.45rem .9rem;
+
+    border-radius:999px;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+}
 
 }

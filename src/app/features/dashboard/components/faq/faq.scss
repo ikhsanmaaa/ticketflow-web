@@ -1,0 +1,74 @@
+@use "styles/index.scss" as *;
+
+.faq {
+    @include glass-card;
+     transition:
+
+        border-color $transition,
+
+        background-color $transition;
+
+
+    padding: $space-8;
+
+    &__header {
+
+        margin-bottom: $space-6;
+
+        h2 {
+
+            font-size: 1.5rem;
+
+            margin-bottom: .5rem;
+
+        }
+
+        p {
+
+            color: $text-secondary;
+
+        }
+
+    }
+
+    &__item {
+
+        border-top: 1px solid $border;
+
+        padding: $space-4 0;
+
+        summary {
+
+            cursor: pointer;
+
+            font-weight: 600;
+
+            list-style: none;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            &::-webkit-details-marker {
+
+                display: none;
+
+            }
+
+        }
+
+        p {
+
+            margin-top: $space-4;
+
+            color: $text-secondary;
+
+            line-height: 1.8;
+
+        }
+
+    }
+
+}

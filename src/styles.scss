@@ -1,9 +1,32 @@
+@use 'tailwindcss';
+@use "./app/styles/index.scss" as *;
+@use "./app/styles/base/reset";
+@use "./app/styles/base/typography";
+@use "./app/styles/base/animations";
+@use "./app/styles/base/utilities";
+@use "./app/styles/layout/container";
+@use "./app/styles/layout/grid";
+
 @layer ng-icon, theme, base, components, utilities;
-@import 'tailwindcss';
+@plugin "tailwindcss-animate";
+@layer ng-icon, theme, base, components, utilities;
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
 
+
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+app-root {
+  display: block;
+  min-height: 100vh;
+}
 
 :root {
   --radius: 0.625rem;
@@ -149,4 +172,20 @@
 ::-webkit-scrollbar-track {
   border-radius: 5px;
   background: var(--muted);
+}
+
+button{
+  cursor: pointer;
+}
+
+.ticket-dialog-container{
+
+    width:min(760px,92vw)!important;
+
+    max-width:760px!important;
+
+    padding:0!important;
+
+    overflow:hidden;
+
 }

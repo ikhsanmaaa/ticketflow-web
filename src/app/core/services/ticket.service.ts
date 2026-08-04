@@ -12,10 +12,9 @@ export class TicketService {
   constructor(readonly api: ApiService) {}
 
   getTickets(token: string) {
-    return this.api.get<Ticket[]>(API.ticket.list, {
-      params: {
-        token,
-      },
-    });
+    return this.api.get<Ticket>(`${API.ticket.list}/${token}`);
+  }
+  getLastTickets() {
+    return this.api.get<Ticket[]>(`${API.lastTicket.list}`);
   }
 }

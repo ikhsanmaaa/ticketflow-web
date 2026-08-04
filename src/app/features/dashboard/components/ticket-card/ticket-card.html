@@ -1,23 +1,29 @@
-<div class="ticket-card">
-  <div class="ticket-left">
-    <span class="key">
-      {{ ticket.key }}
-    </span>
+<z-card class="ticket-card" (click)="open()">
+  <div class="ticket-card__header">
+    <div class="ticket-card__identity">
+      <span class="ticket-card__key">
+        {{ ticket.key }}
+      </span>
 
-    <div>
-      <h4>
+      <h3 class="ticket-card__title">
         {{ ticket.summary }}
-      </h4>
+      </h3>
 
-      <small>
-        {{ ticket.workType }}
+      <div class="ticket-card__meta">
+        <span>{{ ticket.issueType }}</span>
 
-        •
+        <span>•</span>
 
-        {{ ticket.updated }}
-      </small>
+        <span>{{ ticket.lastUpdated }}</span>
+      </div>
     </div>
-  </div>
 
-  <app-status-badge [status]="ticket.status" />
-</div>
+    <span
+      class="ticket-dialog__status"
+      [style.background]="statusConfig[ticket.status]?.color + '15'"
+      [style.color]="statusConfig[ticket.status]?.color"
+    >
+      {{ ticket.status }}
+    </span>
+  </div>
+</z-card>

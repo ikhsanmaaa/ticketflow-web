@@ -1,12 +1,77 @@
-:host{
-    display:block;
+@use "styles/index" as *;
+
+
+.dashboard {
+
+  max-width: 1120px;
+
+  margin: 0 auto;
+
+  padding: 2rem 1.5rem 4rem;
+  
+
 }
-.dashboard{
 
-    display:grid;
+.dashboard__grid {
 
-    grid-template-columns:1fr 300px;
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(300px, 1fr);
+  gap: 24px;
 
-    gap:24px;
+}
 
+.dashboard__left {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1.5rem
+
+}
+
+.dashboard__right {
+
+  position: sticky;
+
+  top: 90px;
+
+}
+
+.dashboard_container {
+   margin: 0 auto;
+  padding: 0 1.5rem;
+
+  width: 100%;
+   @include down(laptop) {
+     .dashboard__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard__right {
+    position: static;
+  }
+  }
+
+  @include down(tablet) {
+    padding: 1rem;
+  }
+
+  @include down(mobile) {
+    .dashboard {
+    padding: 1rem;
+  }
+  .dashboard__right {
+        position: static;
+    }
+    font-size: 14px;
+  }
+}
+
+.hero {
+  padding: 3.5rem 0;
+}
+
+.dashboard {
+  padding: 2rem 0 4rem;
 }

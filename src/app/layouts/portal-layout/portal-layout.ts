@@ -8,6 +8,6 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet, Header, Footer],
   templateUrl: './portal-layout.html',
-  styleUrl: './portal-layout.css',
+  styleUrl: './portal-layout.scss',
 })
 export class PortalLayout {}

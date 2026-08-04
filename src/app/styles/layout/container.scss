@@ -1,0 +1,7 @@
+@use "../abstracts/mixins" as *;
+
+.container{
+
+    @include container;
+
+}

@@ -1,0 +1,54 @@
+<div class="ticket-dialog">
+  <button class="ticket-dialog__close" (click)="close()">✕</button>
+
+  <header class="ticket-dialog__header">
+    <div class="ticket-dialog__top">
+      <span class="ticket-dialog__type">
+        {{ ticket.issueType }}
+      </span>
+    </div>
+
+    <h2>
+      {{ ticket.summary }}
+    </h2>
+
+    <p>
+      {{ ticket.key }}
+    </p>
+  </header>
+
+  <section class="ticket-dialog__body">
+    <div class="ticket-dialog__meta">
+      <span> Status </span>
+
+      <span
+        class="ticket-dialog__status"
+        [style.background]="statusConfig[ticket.status]?.color + '15'"
+        [style.color]="statusConfig[ticket.status]?.color"
+      >
+        {{ ticket.status }}
+      </span>
+    </div>
+
+    <div class="ticket-dialog__meta">
+      <span> Terakhir diperbarui </span>
+
+      <strong>
+        {{ ticket.lastUpdated }}
+      </strong>
+    </div>
+    <div class="ticket-dialog__next">
+      <small> LANGKAH BERIKUTNYA </small>
+
+      <p>
+        {{ statusConfig[ticket.status]?.nextStep }}
+      </p>
+    </div>
+
+    @if (statusConfig[ticket.status]?.actionRequired) {
+      <div class="ticket-dialog__warning">
+        Mohon balas email tiket agar proses dapat dilanjutkan.
+      </div>
+    }
+  </section>
+</div>

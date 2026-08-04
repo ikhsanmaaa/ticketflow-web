@@ -1,0 +1,29 @@
+@use "../abstracts/variable.scss" as *;
+
+body{
+
+    font-family:$font-family;
+
+    color:#111827;
+
+    line-height:1.6;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5{
+
+    margin:0;
+
+    line-height:1.2;
+
+}
+
+p{
+
+    margin:0;
+
+}
