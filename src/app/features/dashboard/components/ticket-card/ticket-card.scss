@@ -2,6 +2,8 @@
 
 .ticket-card{
 
+  @include glass-card;
+
   transition:  transform $transition,
 
         box-shadow $transition,
@@ -12,8 +14,6 @@
 
   padding:1rem;
 
-  border-radius:10px;
-
   cursor:pointer;
 
   transition:.18s;
@@ -23,7 +23,7 @@
 
     box-shadow:0 12px 30px rgba(0,0,0,.08);
 
-    background:rgba($primary,.04);
+    background:transparent;
 
   }
 

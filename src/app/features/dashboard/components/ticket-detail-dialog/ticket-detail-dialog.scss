@@ -1,198 +1,211 @@
 @use "styles/index" as *;
 
 .ticket-dialog {
+  width: min(100%, 500px);
+  overflow: hidden;
 
-    position: relative;
+  border-radius: 12px;
 
-    display: flex;
+  background: rgba(255,255,255,.78);
+  border: 1px solid rgba(255,255,255,.65);
 
-    flex-direction: column;
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
 
-    background: white;
+  box-shadow: 0 24px 64px rgba(0,0,0,.18);
 }
 
 .ticket-dialog__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
 
-    position: absolute;
+  width: 30px;
+  height: 30px;
 
-    top: 1rem;
+  border: 0;
+  border-radius: 6px;
 
-    right: 1rem;
+  background: rgba(255,255,255,.6);
 
-    width: 36px;
+  color: $text-secondary;
 
-    height: 36px;
+  font-size: 18px;
 
-    border: none;
+  transition: .2s;
 
-    border-radius: 999px;
-
-    background: transparent;
-
-    color: $text-secondary;
-
-    font-size: 1.2rem;
-
-    transition: .2s;
-
-    &:hover{
-
-        background:#f5f5f5;
-
-    }
-
+  &:hover{
+    background: rgba(255,255,255,.9);
+  }
 }
 
 .ticket-dialog__header{
 
-    padding:2rem;
-
-    border-bottom:1px solid $border;
+  padding:20px;
+  border-bottom:1px solid rgba(228,228,231,.7);
 
 }
 
 .ticket-dialog__top{
 
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    margin-bottom:1.5rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:12px;
+  margin-bottom:14px;
 
 }
 
 .ticket-dialog__type{
 
-    display:inline-flex;
+  display:inline-flex;
 
-    padding:.45rem .85rem;
+  padding:4px 10px;
 
-    border-radius:999px;
+  border-radius:999px;
 
-    border:1px solid $border;
+  border:1px solid rgba(228,228,231,.7);
 
-    background:#f8fafc;
+  background:rgba(255,255,255,.55);
 
-    color:$text-secondary;
+  font-size:11px;
 
-    font-size:.8rem;
+  font-weight:600;
 
-    font-weight:600;
+  color:$text-secondary;
 
 }
 
 .ticket-dialog__status{
 
-    display:inline-flex;
+  display:inline-flex;
 
-    align-items:center;
+  align-items:center;
 
-    padding:.45rem .9rem;
+  padding:4px 10px;
 
-    border-radius:999px;
+  border-radius:999px;
 
-    font-size:.8rem;
+  font-size:11px;
 
-    font-weight:600;
+  font-weight:700;
+
+  white-space:nowrap;
 
 }
 
 .ticket-dialog__header h2{
 
-    margin:0;
+  margin:0;
 
-    font-size:1.9rem;
+  font-size:18px;
 
-    line-height:1.35;
+  line-height:1.35;
 
-    font-weight:700;
+  font-weight:700;
 
 }
 
 .ticket-dialog__header p{
 
-    margin-top:.75rem;
+  margin-top:6px;
 
-    color:$text-secondary;
+  font-size:13px;
+
+  color:$text-secondary;
 
 }
 
 .ticket-dialog__body{
 
-    padding:2rem;
+  padding:20px;
 
 }
 
 .ticket-dialog__meta{
 
-    display:flex;
+  display:flex;
 
-    justify-content:space-between;
+  justify-content:space-between;
 
-    align-items:center;
+  align-items:center;
 
-    padding-bottom:1.5rem;
+  padding:12px 0;
 
-    margin-bottom:1.5rem;
+  border-bottom:1px solid rgba(228,228,231,.7);
 
-    border-bottom:1px solid $border;
+  font-size:13px;
 
 }
 
 .ticket-dialog__meta span{
 
-    color:$text-secondary;
+  color:$text-secondary;
+
+}
+
+.ticket-dialog__meta strong{
+
+  font-weight:600;
 
 }
 
 .ticket-dialog__next{
 
-    padding:1.25rem;
+  margin-top:16px;
 
-    border-radius:14px;
+  padding:14px;
 
-    background:#f8fafc;
+  border-radius:8px;
 
-    border:1px solid $border;
+  background:rgba(255,255,255,.45);
+
+  border:1px solid rgba(228,228,231,.7);
 
 }
 
 .ticket-dialog__next small{
 
-    display:block;
+  display:block;
 
-    margin-bottom:.75rem;
+  margin-bottom:6px;
 
-    color:$text-secondary;
+  font-size:11px;
 
-    font-weight:700;
+  font-weight:700;
 
-    letter-spacing:.08em;
+  letter-spacing:.08em;
+
+  text-transform:uppercase;
+
+  color:$text-secondary;
 
 }
 
 .ticket-dialog__next p{
 
-    margin:0;
+  margin:0;
 
-    line-height:1.8;
+  font-size:13px;
+
+  line-height:1.6;
 
 }
 
 .ticket-dialog__warning{
 
-    margin-top:1rem;
+  margin-top:14px;
 
-    padding:1rem;
+  padding:12px;
 
-    border-radius:12px;
+  border-radius:8px;
 
-    background:#fff8e7;
+  background:#fef3f2;
 
-    border-left:4px solid #f59e0b;
+  border:1px solid #fecdca;
 
-    color:#92400e;
+  color:#912018;
+
+  font-size:13px;
 
 }

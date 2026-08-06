@@ -180,12 +180,14 @@ button{
 
 .ticket-dialog-container{
 
-    width:min(760px,92vw)!important;
-
-    max-width:760px!important;
-
-    padding:0!important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: auto !important;
+    max-width: 500px !important;
 
     overflow:hidden;
 
 }
+ 
