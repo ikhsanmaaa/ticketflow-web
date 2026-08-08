@@ -4,7 +4,7 @@ import { ZardCardComponent } from '@/shared/ui/card';
 @Component({
   selector: 'app-error-state',
   imports: [ZardCardComponent],
-  templateUrl: './error-state.html',
-  styleUrl: './error-state.scss',
+  templateUrl: './error-state.component.html',
+  styleUrl: './error-state.component.scss',
 })
-export class ErrorState {}
+export class ErrorStateComponent {}

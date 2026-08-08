@@ -5,7 +5,7 @@ import { ZardSkeletonComponent } from '@/shared/ui/skeleton';
 @Component({
   selector: 'app-ticket-skeleton',
   imports: [ZardCardComponent, ZardSkeletonComponent],
-  templateUrl: './ticket-skeleton.html',
-  styleUrl: './ticket-skeleton.scss',
+  templateUrl: './ticket-skeleton.component.html',
+  styleUrl: './ticket-skeleton.component.scss',
 })
-export class TicketSkeleton {}
+export class TicketSkeletonComponent {}

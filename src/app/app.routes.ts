@@ -1,22 +1,22 @@
 import { Routes } from '@angular/router';
-import { Dashboard } from './features/dashboard/dashboard';
-import { PortalLayout } from './layouts/portal-layout/portal-layout';
+import { DashboardComponent } from './features/dashboard/dashboard.component';
+import { PortalLayoutComponent } from './layouts/portal-layout/portal-layout.component';
 
 export const routes: Routes = [
   {
     path: '',
 
-    component: PortalLayout,
+    component: PortalLayoutComponent,
 
     children: [
       {
         path: '',
 
-        component: Dashboard,
+        component: DashboardComponent,
       },
       {
         path: 'token/:token',
-        component: Dashboard,
+        component: DashboardComponent,
       },
     ],
   },

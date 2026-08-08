@@ -11,11 +11,11 @@ import { STATUS_CONFIG } from '@/shared/utils/status-ticket-constant';
 
   imports: [ZardCardComponent],
 
-  templateUrl: './ticket-card.html',
+  templateUrl: './ticket-card.component.html',
 
-  styleUrl: './ticket-card.scss',
+  styleUrl: './ticket-card.component.scss',
 })
-export class TicketCard {
+export class TicketCardComponent {
   @Input()
   ticket!: Ticket;
 

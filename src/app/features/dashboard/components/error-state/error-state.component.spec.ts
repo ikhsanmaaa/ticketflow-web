@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Header } from './header';
+import { ErrorStateComponent } from './error-state.component';
 
-describe('Header', () => {
-  let component: Header;
-  let fixture: ComponentFixture<Header>;
+describe('ErrorStateComponent', () => {
+  let component: ErrorStateComponent;
+  let fixture: ComponentFixture<ErrorStateComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Header],
+      imports: [ErrorStateComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Header);
+    fixture = TestBed.createComponent(ErrorStateComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

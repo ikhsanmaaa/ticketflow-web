@@ -10,10 +10,10 @@ interface FaqItem {
   selector: 'app-faq',
   standalone: true,
   imports: [ZardAccordionImports],
-  templateUrl: './faq.html',
-  styleUrl: './faq.scss',
+  templateUrl: './faq.component.html',
+  styleUrl: './faq.component.scss',
 })
-export class Faq {
+export class FaqComponent {
   readonly faqs = signal<FaqItem[]>([
     {
       question: 'Mengapa tiket saya berstatus Waiting for Customer?',

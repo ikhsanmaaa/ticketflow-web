@@ -1,15 +1,15 @@
 import { Component, Input } from '@angular/core';
-import { TicketCard } from '../ticket-card/ticket-card';
+import { TicketCardComponent } from '../ticket-card/ticket-card.component';
 import { TicketDialogService } from '@/core/services/tiket-dialog.service';
 import { Ticket } from '@/core/models/ticket';
 
 @Component({
   selector: 'app-ticket-section',
-  imports: [TicketCard],
-  templateUrl: './ticket-section.html',
-  styleUrl: './ticket-section.scss',
+  imports: [TicketCardComponent],
+  templateUrl: './ticket-section.component.html',
+  styleUrl: './ticket-section.component.scss',
 })
-export class TicketSection {
+export class TicketSectionComponent {
   constructor(readonly dialog: TicketDialogService) {}
 
   @Input()

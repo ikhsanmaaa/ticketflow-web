@@ -6,10 +6,10 @@ import { STATUS_CONFIG } from '@/shared/utils/status-ticket-constant';
 @Component({
   selector: 'app-ticket-detail-dialog',
   imports: [],
-  templateUrl: './ticket-detail-dialog.html',
-  styleUrl: './ticket-detail-dialog.scss',
+  templateUrl: './ticket-detail-dialog.component.html',
+  styleUrl: './ticket-detail-dialog.component.scss',
 })
-export class TicketDetailDialog {
+export class TicketDetailDialogComponent {
   readonly ticket = injectDialogData<Ticket>();
 
   readonly statusConfig = STATUS_CONFIG;

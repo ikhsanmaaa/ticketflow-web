@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TicketSkeleton } from './ticket-skeleton';
+import { HeaderComponent } from './header.component';
 
-describe('TicketSkeleton', () => {
-  let component: TicketSkeleton;
-  let fixture: ComponentFixture<TicketSkeleton>;
+describe('HeaderComponent', () => {
+  let component: HeaderComponent;
+  let fixture: ComponentFixture<HeaderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TicketSkeleton],
+      imports: [HeaderComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(TicketSkeleton);
+    fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

@@ -4,7 +4,7 @@ import { ZardCardComponent } from '@/shared/ui/card';
 @Component({
   selector: 'app-empty-state',
   imports: [ZardCardComponent],
-  templateUrl: './empty-state.html',
-  styleUrl: './empty-state.scss',
+  templateUrl: './empty-state.component.html',
+  styleUrl: './empty-state.component.scss',
 })
-export class EmptyState {}
+export class EmptyStateComponent {}

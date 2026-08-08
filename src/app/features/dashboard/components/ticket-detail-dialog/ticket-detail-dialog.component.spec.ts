@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TicketDetailDialog } from './ticket-detail-dialog';
+import { TicketDetailDialogComponent } from './ticket-detail-dialog.component';
 
 describe('TicketDetailDialog', () => {
-  let component: TicketDetailDialog;
-  let fixture: ComponentFixture<TicketDetailDialog>;
+  let component: TicketDetailDialogComponent;
+  let fixture: ComponentFixture<TicketDetailDialogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TicketDetailDialog],
+      imports: [TicketDetailDialogComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(TicketDetailDialog);
+    fixture = TestBed.createComponent(TicketDetailDialogComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

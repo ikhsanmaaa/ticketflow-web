@@ -5,10 +5,10 @@ import { Component } from '@angular/core';
   selector: 'app-header',
   standalone: true,
   imports: [ZardButtonComponent],
-  templateUrl: './header.html',
-  styleUrl: './header.scss',
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.scss',
 })
-export class Header {
+export class HeaderComponent {
   login() {
     console.log('login');
   }

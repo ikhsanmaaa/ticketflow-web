@@ -1,23 +1,23 @@
 import { Component, OnInit, signal } from '@angular/core';
 
-import { Hero } from './components/hero/hero';
-import { PrivacyCard } from './components/privacy-card/privacy-card';
+import { HeroComponent } from './components/hero/hero.component';
+import { PrivacyCardComponent } from './components/privacy-card/privacy-card.component';
 import { TicketStore } from '@/core/stores/ticket-stores';
 import { TokenService } from '@/core/services/token.service';
-import { TicketSection } from './components/ticket-section/ticket-section';
-import { Faq } from './components/faq/faq';
+import { TicketSectionComponent } from './components/ticket-section/ticket-section.component';
+import { FaqComponent } from './components/faq/faq.component';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
   standalone: true,
   selector: 'app-dashboard',
 
-  imports: [Hero, PrivacyCard, TicketSection, Faq],
+  imports: [HeroComponent, PrivacyCardComponent, TicketSectionComponent, FaqComponent],
 
   templateUrl: './pages/dashboard.page.html',
   styleUrl: './pages/dashboard.scss',
 })
-export class Dashboard implements OnInit {
+export class DashboardComponent implements OnInit {
   constructor(
     readonly store: TicketStore,
     private readonly tokenService: TokenService,

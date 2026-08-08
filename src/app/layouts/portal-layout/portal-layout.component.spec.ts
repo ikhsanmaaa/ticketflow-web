@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TicketSection } from './ticket-section';
+import { PortalLayoutComponent } from './portal-layout.component';
 
-describe('TicketSection', () => {
-  let component: TicketSection;
-  let fixture: ComponentFixture<TicketSection>;
+describe('PortalLayoutComponent', () => {
+  let component: PortalLayoutComponent;
+  let fixture: ComponentFixture<PortalLayoutComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TicketSection],
+      imports: [PortalLayoutComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(TicketSection);
+    fixture = TestBed.createComponent(PortalLayoutComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

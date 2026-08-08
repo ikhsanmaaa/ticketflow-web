@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PrivacyCard } from './privacy-card';
+import { FaqComponent } from './faq.component';
 
-describe('PrivacyCard', () => {
-  let component: PrivacyCard;
-  let fixture: ComponentFixture<PrivacyCard>;
+describe('FaqComponent', () => {
+  let component: FaqComponent;
+  let fixture: ComponentFixture<FaqComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PrivacyCard],
+      imports: [FaqComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(PrivacyCard);
+    fixture = TestBed.createComponent(FaqComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EmptyState } from './empty-state';
+import { TicketSkeletonComponent } from './ticket-skeleton.component';
 
-describe('EmptyState', () => {
-  let component: EmptyState;
-  let fixture: ComponentFixture<EmptyState>;
+describe('TicketSkeletonComponent', () => {
+  let component: TicketSkeletonComponent;
+  let fixture: ComponentFixture<TicketSkeletonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EmptyState],
+      imports: [TicketSkeletonComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(EmptyState);
+    fixture = TestBed.createComponent(TicketSkeletonComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
