@@ -4,7 +4,7 @@
   <section class="dashboard">
     <div class="dashboard__grid">
       <div class="dashboard__left">
-        <app-ticket-section [tickets]="store.tickets()" />
+        <app-ticket-section [tickets]="store.tickets()" (clearRequested)="store.clearHistory()" />
 
         <app-faq />
       </div>

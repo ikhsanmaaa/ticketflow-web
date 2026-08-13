@@ -1,39 +1,42 @@
 @use "styles/index" as *;
 
 .ticket-section {
-
   @include glass-card;
 
   overflow: hidden;
-
   padding: 0;
 
-  &__header{
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
 
-    padding:1.25rem 1.5rem;
+    padding: 1.25rem 1.5rem;
 
-    border-bottom:1px solid $border;
+    border-bottom: 1px solid $border;
 
-    h2{
+    .left {
+      min-width: 0;
 
-      margin:0;
+      h2 {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
 
-      font-size:1.1rem;
-
-      font-weight:700;
-
+      p {
+        margin: 0.35rem 0 0;
+        color: $text-secondary;
+        font-size: 0.875rem;
+      }
     }
 
-    p{
-
-      margin:.35rem 0 0;
-
-      color:$text-secondary;
-
-      font-size:.875rem;
-
+    .right {
+      flex-shrink: 0;
     }
-
   }
-
+  .btn_clear_ticket{
+    text-decoration: solid;
+  }
 }
