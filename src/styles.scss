@@ -178,16 +178,18 @@ button{
   cursor: pointer;
 }
 
-.ticket-dialog-container{
+.ticket-dialog-container {
+  width: 500px !important;
+  min-width: 500px !important;
+  max-width: 500px !important;
 
-    padding: 0 !important;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    width: auto !important;
-    max-width: 500px !important;
+  padding: 0 !important;
 
-    overflow:hidden;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 
+  overflow: hidden;
+  box-sizing: border-box;
 }
  
