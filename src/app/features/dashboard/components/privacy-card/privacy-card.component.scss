@@ -1,59 +1,88 @@
 @use "styles/index" as *;
 
 .privacy-card {
-
   @include glass-card;
 
-  padding: 20px;
+  padding: 24px;
 
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 
-  h2{
+  h2 {
     margin: 0;
-    font-size: 1.25rem;   // sebelumnya 1.5rem
+
+    color: $text-primary;
+    font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.3;
   }
 
-  &__description{
+  &__description {
     margin: 0;
+
     color: $text-secondary;
-    font-size: .88rem;
+    font-size: 0.875rem;
+    font-weight: 400;
     line-height: 1.7;
   }
 
-  &__divider{
+  &__divider {
+    width: 100%;
     height: 1px;
-    background: rgba(228,228,231,.7);
+
+    background: rgba(228, 228, 231, 0.65);
   }
 
-  &__item{
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
 
-    padding: 10px 0;
+    margin: 0;
+    padding: 0;
 
-    border-bottom: 1px solid rgba(228,228,231,.7);
+    list-style: none;
 
-    &:last-child{
-      border-bottom: none;
-      padding-bottom: 0;
+    li {
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+
+      padding-left: 15px;
+
+      &::before {
+        content: '';
+
+        position: absolute;
+        top: 7px;
+        left: 0;
+
+        width: 5px;
+        height: 5px;
+
+        border-radius: 50%;
+
+        background: #86b83f;
+      }
     }
 
-    h3{
-      margin: 0 0 3px;
-      font-size: .84rem;
+    strong {
+      color: $text-primary;
+
+      font-size: 0.8rem;
       font-weight: 600;
-      line-height: 1.35;
+      line-height: 1.4;
     }
 
-    p{
-      margin: 0;
+    span {
       color: $text-secondary;
-      font-size: .76rem;
+
+      font-size: 0.75rem;
+      font-weight: 400;
       line-height: 1.55;
     }
-
   }
-
 }

@@ -1,15 +1,7 @@
 @use "styles/index" as *;
 
 .ticket-card{
-
-  @include glass-card;
-
-  transition:  transform $transition,
-
-        box-shadow $transition,
-
-        background-color $transition;
-
+background:transparent;
   margin: 10px 5px 10px 5px;
 
   padding:1rem;
@@ -23,7 +15,7 @@
 
     box-shadow:0 12px 30px rgba(0,0,0,.08);
 
-    background:transparent;
+    background:$surface;
 
   }
 
