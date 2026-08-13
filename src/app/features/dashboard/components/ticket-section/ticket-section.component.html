@@ -1,13 +1,15 @@
 <section class="ticket-section">
   <div class="ticket-section__header">
-    <h2>Tiket Terbaru</h2>
+    <div>
+      <h2>Tiket Terbaru</h2>
 
-    <p>Status terbaru tiket Anda.</p>
+      <p>Status terbaru tiket Anda.</p>
+    </div>
   </div>
 
   <div class="ticket-section__list">
     @for (ticket of tickets; track ticket.key) {
-      <app-ticket-card [ticket]="ticket" (clicked)="openTicket($event)"> </app-ticket-card>
+      <app-ticket-card [ticket]="ticket" (click)="openTicket(ticket)" />
     }
   </div>
 </section>
