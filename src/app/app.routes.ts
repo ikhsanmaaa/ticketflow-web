@@ -18,6 +18,10 @@ export const routes: Routes = [
         path: 'token/:token',
         component: DashboardComponent,
       },
+      {
+        path: 'auth',
+        loadChildren: () => import('./features/auth/auth.routes').then((m) => m.AUTH_ROUTES),
+      },
     ],
   },
 ];
