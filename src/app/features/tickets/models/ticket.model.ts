@@ -1,11 +1,7 @@
 export interface Ticket {
   key: string;
-
   summary: string;
-
+  issueType: string;
   status: string;
-
-  workType: string;
-
   lastUpdated: string;
 }

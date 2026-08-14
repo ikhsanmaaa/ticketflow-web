@@ -9,7 +9,7 @@
 
   <div class="ticket-section__list">
     @for (ticket of tickets; track ticket.key) {
-      <app-ticket-card [ticket]="ticket" (click)="openTicket(ticket)" />
+      <app-ticket-card [ticket]="ticket" (ticketSelected)="openTicket($event)" />
     }
   </div>
 </section>

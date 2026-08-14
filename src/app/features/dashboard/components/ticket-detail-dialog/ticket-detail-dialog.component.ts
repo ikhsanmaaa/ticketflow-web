@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { injectDialogData, ZardDialogRef } from '@/shared/ui/dialog';
-import { Ticket } from '@/core/models/ticket';
+import { Ticket } from '@/features/tickets/models/ticket.model';
 import { STATUS_CONFIG } from '@/shared/utils/status-ticket-constant';
 
 @Component({

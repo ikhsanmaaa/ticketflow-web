@@ -1,4 +1,4 @@
-export const API = {
+export const TICKET_ENDPOINTS = {
   ticket: {
     list: '/token',
   },

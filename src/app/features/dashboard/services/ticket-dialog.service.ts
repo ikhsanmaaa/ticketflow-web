@@ -1,6 +1,6 @@
 import { ZardDialogService } from '@/shared/ui/dialog';
 import { Injectable } from '@angular/core';
-import { Ticket } from '../models/ticket';
+import { Ticket } from '@/features/tickets/models/ticket.model';
 import { TicketDetailDialogComponent } from '@/features/dashboard/components/ticket-detail-dialog/ticket-detail-dialog.component';
 
 @Injectable({
