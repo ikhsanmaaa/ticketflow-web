@@ -2,11 +2,7 @@ import { Injectable, signal } from '@angular/core';
 
 import { Ticket } from '../models/ticket';
 import { TicketService } from '../services/ticket.service';
-<<<<<<< HEAD
-import { TicketStorageService } from '../services/ticket-storage.service';
-=======
 import { TicketStorageService } from '../services/ticket-storage.sevice';
->>>>>>> main
 
 @Injectable({
   providedIn: 'root',

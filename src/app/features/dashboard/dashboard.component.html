@@ -1,0 +1,17 @@
+<div class="dashboard_container">
+  <app-hero />
+
+  <section class="dashboard">
+    <div class="dashboard__grid">
+      <div class="dashboard__left">
+        <app-ticket-section [tickets]="store.tickets()" />
+
+        <app-faq />
+      </div>
+
+      <aside class="dashboard__right">
+        <app-privacy-card />
+      </aside>
+    </div>
+  </section>
+</div>
