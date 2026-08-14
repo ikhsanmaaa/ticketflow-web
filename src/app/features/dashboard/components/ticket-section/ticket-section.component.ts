@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { TicketCardComponent } from '../ticket-card/ticket-card.component';
-import { TicketDialogService } from '@/core/services/tiket-dialog.service';
-import { Ticket } from '@/core/models/ticket';
+import { TicketDialogService } from '@/features/dashboard/services/ticket-dialog.service';
+import { Ticket } from '@/features/tickets/models/ticket.model';
 
 @Component({
   selector: 'app-ticket-section',
