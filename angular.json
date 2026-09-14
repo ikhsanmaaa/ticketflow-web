@@ -91,7 +91,7 @@
           "builder": "@angular/build:dev-server",
           "options": {
             "allowedHosts": [
-              "dev-portal-spoc.gmf-aeroasia.co.id"
+              "staging-portal-spoc.gmf-aeroasia.co.id"
             ]
           },
           "configurations": {
