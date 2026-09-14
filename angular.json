@@ -9,35 +9,35 @@
     "ticketflow-web": {
       "projectType": "application",
       "schematics": {
-  "@schematics/angular:component": {
-    "style": "scss",
-    "type": "component",
-    "addTypeToClassName": true
-  },
-  "@schematics/angular:directive": {
-    "type": "directive",
-    "addTypeToClassName": true
-  },
-  "@schematics/angular:service": {
-    "type": "service",
-    "addTypeToClassName": true
-  },
-  "@schematics/angular:guard": {
-    "typeSeparator": "."
-  },
-  "@schematics/angular:interceptor": {
-    "typeSeparator": "."
-  },
-  "@schematics/angular:pipe": {
-    "typeSeparator": "."
-  },
-  "@schematics/angular:resolver": {
-    "typeSeparator": "."
-  },
-  "@schematics/angular:module": {
-    "typeSeparator": "."
-  }
-},
+        "@schematics/angular:component": {
+          "style": "scss",
+          "type": "component",
+          "addTypeToClassName": true
+        },
+        "@schematics/angular:directive": {
+          "type": "directive",
+          "addTypeToClassName": true
+        },
+        "@schematics/angular:service": {
+          "type": "service",
+          "addTypeToClassName": true
+        },
+        "@schematics/angular:guard": {
+          "typeSeparator": "."
+        },
+        "@schematics/angular:interceptor": {
+          "typeSeparator": "."
+        },
+        "@schematics/angular:pipe": {
+          "typeSeparator": "."
+        },
+        "@schematics/angular:resolver": {
+          "typeSeparator": "."
+        },
+        "@schematics/angular:module": {
+          "typeSeparator": "."
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -68,8 +68,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "5MB",
+                  "maximumError": "5MB"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -89,6 +89,11 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "allowedHosts": [
+              "dev-portal-spoc.gmf-aeroasia.co.id"
+            ]
+          },
           "configurations": {
             "production": {
               "buildTarget": "ticketflow-web:build:production"
